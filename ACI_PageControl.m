@@ -48,6 +48,17 @@
     [self calculateMaximumNumberOfVisiblePages];
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    
+    // if our frame gets updated, we need to recalulate and reposition some values
+    _rangeOfVisiblePages = NSMakeRange(0, 0);
+    [self calculateMaximumNumberOfVisiblePages];
+    self.numberOfPages = self.pageControl.numberOfPages; // will resize the page control
+    [self positionPageControlAnimated:NO]; // we need to reposition the page control
+}
+
 // calculate maximum number of possible visible dots
 - (void)calculateMaximumNumberOfVisiblePages
 {
