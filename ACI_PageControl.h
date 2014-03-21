@@ -16,29 +16,29 @@
 @interface ACI_PageControl : UIView
 
 /**
- @brief
- @details
+ @brief The current page shown by the page control
+ @details Default: 0
  @sa UIPageControl#currentPage
  */
 @property(nonatomic) NSInteger currentPage;
 
 /**
- @brief
- @details
+ @brief The total number of the page control.
+ @details Default: 0
  @sa UIPageControl#numberOfPages
  */
 @property(nonatomic) NSInteger numberOfPages;
 
 /**
- @brief
- @details
+ @brief The tint of dot's that aren't the current one.
+ @details Default: The default from UIPageControl.
  @sa UIPageControl#numberOfPages
  */
 @property(nonatomic) UIColor *pageIndicatorTintColor;
 
 /**
- @brief
- @details
+ @brief The tint of the current dot.
+ @details Default: The default from UIPageControl.
  @sa UIPageControl#numberOfPages
  */
 @property(nonatomic) UIColor *currentPageIndicatorTintColor;
