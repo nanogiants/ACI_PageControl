@@ -112,14 +112,16 @@
 {
     self.pageControl.numberOfPages = numberOfPages;
     
-    // if we just fit inside our boumds -> just set the frame to bounds to center the dots
     if (self.maximumNumberOfVisiblePages < numberOfPages) {
+        
+        // set the size of our page control depending on the needed size to show all dots
         self.pageControl.frame = (CGRect) {
             .origin.x = 0,
             .origin.y = 0,
             .size = [self.pageControl sizeForNumberOfPages:numberOfPages]
         };
     } else {
+        // if we just fit inside our boumds -> set the frame to our bounds, so it will center the dots
         self.pageControl.frame = self.bounds;
     }
     
@@ -129,6 +131,26 @@
 - (NSInteger)numberOfPages
 {
     return self.pageControl.numberOfPages;
+}
+
+- (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor
+{
+    self.pageControl.pageIndicatorTintColor = pageIndicatorTintColor;
+}
+
+- (UIColor *)pageIndicatorTintColor
+{
+    return self.pageControl.pageIndicatorTintColor;
+}
+
+- (void)setCurrentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
+{
+    self.pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor;
+}
+
+- (UIColor *)currentPageIndicatorTintColor
+{
+    return self.pageControl.currentPageIndicatorTintColor;
 }
 
 @end
