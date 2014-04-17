@@ -62,6 +62,16 @@
     }
 }
 
+- (void)setPageIndicatorUserInteractionsEnabled:(BOOL)pageIndicatorUserInteractionsEnabled
+{
+    self.pageControl.userInteractionEnabled = pageIndicatorUserInteractionsEnabled;
+}
+
+- (BOOL)pageIndicatorUserInteractionsEnabled
+{
+    return self.pageControl.userInteractionEnabled;
+}
+
 // calculate maximum number of possible visible dots
 - (void)calculateMaximumNumberOfVisiblePages
 {

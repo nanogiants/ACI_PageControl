@@ -32,15 +32,19 @@
 /**
  @brief The tint of dot's that aren't the current one.
  @details Default: The default from UIPageControl.
- @sa UIPageControl#numberOfPages
  */
 @property(nonatomic) UIColor *pageIndicatorTintColor;
 
 /**
  @brief The tint of the current dot.
  @details Default: The default from UIPageControl.
- @sa UIPageControl#numberOfPages
  */
 @property(nonatomic) UIColor *currentPageIndicatorTintColor;
+
+/**
+ @brief enables/disables the user interactions of the underlying pageIndicator.
+ @details Default: The default from UIPageControl.
+ */
+@property(nonatomic) BOOL pageIndicatorUserInteractionsEnabled;
 
 @end
