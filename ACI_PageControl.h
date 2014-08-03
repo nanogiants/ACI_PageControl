@@ -3,7 +3,7 @@
 //  bundespresseamt
 //
 //  Created by Ralph-Gordon Paul on 20.03.14.
-//  Copyright (c) 2014 AppCom Interactive GmbH. All rights reserved.
+//  Copyright (c) 2014 appcom interactive GmbH. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
